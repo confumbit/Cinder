@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Form</title>
+        <script>
+            var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+    </head>
+    <body>
+        This is where you will make the profile that'll appear on the homepage of our website along with the other PORPians.
+
+        <form action="" method="post">
+            <input type="file" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+            <label for="file" style="cursor: pointer;">Upload Image</label>
+            <image id="output"/><br><br>
+            Your Name: <input type="text" name="name"><br><br>
+            Links to the social media you wanna share:<input type="text" name="social media"><br><br>
+            Topics you would want to talk about: <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
+            A little about ya'self: <textarea name="" id="" cols="30" rows="10"></textarea>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,291 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  	
+    <title>Register</title>
+    <style>
+  body {
+    background-image: linear-gradient(#e73a4e,#f8e858);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  .container1 {
+    border: 2px solid white;
+    border-radius: 10px;
+    background: white;
+    width: 500px;
+    height: 1300px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 25px;
+  }
+  .icon
+  {
+  	font-size: 60px;
+  	color: #ffffff;
+  	background: #262626;
+  	border-radius: 50%;
+  	width: 120px;
+    	height: 120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;	
+        justify-content: center;
+
+  }
+  #u
+  {	 border-style: solid;
+  	border-right: none;
+  	border-left: none;
+  	border-top: none;
+  	border-bottom-color: #D3D3D3;
+  		font-size: 16px;
+    display: block;
+    width: 75%;
+    height: 45px;
+      font-family: Poppins;
+    color: #262626;
+    line-height: 1.2;
+    background: transparent;
+      padding: 0 5px 0 30px;
+      margin-left: 45px;
+    background-image: url('1.png');
+    background-position: 0 12px;
+    background-size: 20px	;
+    background-repeat: no-repeat;
+    outline: none;
+  }
+  #p{
+  	  border-style: solid;
+  	border-right: none;
+  	border-left: none;
+  	border-top: none;
+  	border-bottom-color: #D3D3D3;
+  		font-size: 16px;
+    display: block;
+    width: 75%;
+    height: 45px;
+      font-family: Poppins;
+    color: #262626;
+    line-height: 1.2;
+    background: transparent;
+      padding: 0 5px 0 30px;
+      margin-left: 45px;
+    background-image: url('2.png');
+    background-position: 0 12px;
+    background-size: 20px	;
+    background-repeat: no-repeat;
+    outline: none;
+  }
+  #ee
+  {
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom-color: #D3D3D3;
+      font-size: 16px;
+    display: block;
+    width: 75%;
+    height: 45px;
+      font-family: Poppins;
+    color: #262626;
+    line-height: 1.2;
+    background: transparent;
+      padding: 0 5px 0 30px;
+      margin-left: 45px;
+    background-image: url('3.png');
+    background-position: 0 12px;
+    background-size: 19px ;
+    background-repeat: no-repeat;
+    outline: none;
+  }
+  #p:focus{
+  		border-bottom-color: #262626;
+    transition: 0.75s;
+
+  }
+  #uu
+  {
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom-color: #D3D3D3;
+      font-size: 16px;
+    display: block;
+    width: 75%;
+    height: 45px;
+      font-family: Poppins;
+    color: #262626;
+    line-height: 1.2;
+    background: transparent;
+      padding: 0 5px 0 30px;
+      margin-left: 45px;
+    background-image: url('4.png');
+    background-position: 0 12px;
+    background-size: 21px ;
+    background-repeat: no-repeat;
+    outline: none;
+  }
+  #uu:focus{
+      border-bottom-color: #262626;
+    transition: 0.75s;
+
+  }
+  #ee:focus{
+      border-bottom-color: #262626;
+    transition: 0.75s;}
+  #u:focus{
+  		border-bottom-color: #262626;
+    transition: 0.75s;
+  }
+  ::placeholder {
+  color: #262626;
+  }
+  .c
+  {
+  	padding: 35px 0 35px 0;
+  	text-align: left;
+  	margin-left: 42px;
+  }
+  .r
+  {
+  	font-family:  Poppins;
+  	font-size: 14px;
+  	color: #262626;
+
+  }
+  .b
+  {
+  	background-color: #262626;
+  }
+
+  /* Customize the label (the container) */
+  .container {
+  margin-left: 25px;
+  font-family:  Poppins;
+  	font-size: 14px;
+  	color: #262626;
+
+  }
+
+  /* Hide the browser's default checkbox */
+  .container input {
+  display: none;	
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+  margin-left: -126px;
+    height: 15px;
+    width: 15px;
+    background-color: #262626;
+    position: 
+  }
+  	
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  .container .checkmark:after {
+    left: 4.5px;
+    top: 2.5px;
+    width: 2.5px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  .bc
+  {
+  	padding: 35px 0 35px 0;
+  	text-align: left;
+  	margin-left:183px;
+  }
+  .be{
+  	font-family: Poppins;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.2;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 120px;
+    height: 50px;
+    border-radius: 25px;
+  border-style: solid;
+    background: #262626;
+  }
+  </style>
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">s
+  </head>
+  <body>
+  <form action="insert.php" method="POST">
+  	<div class="container1">
+  	<div>
+  		<img src="WhatsApp Image 2020-09-03 at 5.11.18 PM.jpeg" alt="logo">
+  	</div>
+  	<br>
+  	<br>
+  	<div style="align-items : center; color: #262626; font-size: 30px;  font-family: Poppins ;display: block;font-weight: 500;">
+  		<label>
+  		REGISTER
+  		</label>
+  	</div>
+  	<br>
+  	<br>
+  	<div>
+  		<input id="u" type="text" name="firstname" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required>
+  	</div>
+  	<br>
+    <br>
+    <div>
+      <input id="u" type="text" name="lastname" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'"required>
+    </div>
+    <br>
+      <br>
+    <div>
+      <input id="ee" type="email" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'"required>
+    </div>
+    <br>
+      <br>
+    <div>
+      <input id="uu" type="text" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" required>
+    </div>
+    <br>
+      <br>
+  	<div>
+  		<input id="p" type="password" name="password1" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" required>
+  	</div>
+    <br>
+      <br>
+    <div>
+      <input id="p" type="password" name="password2" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'" required>
+    </div>
+    <br>
+    <br>
+    <div style="font-family: Poppins;font-size: 13.5px;padding-right: 35px;padding-left: 35px;opacity: 0.8;">
+      By clicking on Register, I forfeit liberal use of the above information to the administrator.
+    </div>
+    
+  	<div class="bc">
+  		<button class="be" type="submit" name="register">Register</button>
+  	</div>
+  </div>
+  </form>
+  </body>
+  </html>
