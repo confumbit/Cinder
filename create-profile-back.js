@@ -30,7 +30,7 @@ app.post('/reg', (req, res) => {
 
 //html render
 app.get('/', function(request, response){
-  response.sendFile('E:\\Hiten\\Projects\\HTML Projects\\Cinder\\create-profile.html');
+  response.sendFile('/create-profile.html');
 });
 
 app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0' );

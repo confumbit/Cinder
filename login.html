@@ -1,79 +1,12 @@
 <html>
     <head>
         <title>Cinder: Log In</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/login.css">
+        <link rel="icon" href="Images/favicon.png">    
     </head>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-    <style>
-        body{
-            background-image: linear-gradient(#e73a4e,#f8e858);
-            background-position: fixed;
-            background-repeat: no-repeat;
-            margin-bottom: 100px;
-        }
-        .container{
-            border: 2px solid white;
-            border-radius: 10px;
-            background: white;
-            width: 500px;
-            height: 430px;
-            text-align: center;
-            margin: auto;
-            margin-top: 20px;
-            padding-top: 25px;
-        }
-        #u{
-            border-style: solid;
-            border-right: none;
-            border-left: none;
-            border-top: none;
-            border-bottom-color: #D3D3D3;
-            font-size: 16px;
-            display: block;
-            width: 75%;
-            height: 45px;
-            font-family: Poppins;
-            color: #262626;
-            line-height: 1.2;
-            background: transparent;
-            padding: 0 5px 0 30px;
-            margin-left: 65px;
-            background-image: url('1.png');
-            background-position: 0 12px;
-            background-size: 20px	;
-            background-repeat: no-repeat;
-            outline: none;
-        }
-        button{
-                font-family: Poppins;
-                font-size: 16px;
-                color: #ffffff;
-                line-height: 1.2;
-                justify-content: center;
-                align-items: center;
-                padding: 0 20px;
-                min-width: 120px;
-                height: 50px;
-                border-radius: 25px;
-                border-style: solid;
-                background: black;
-            }
-            button:hover{
-                font-family: Poppins;
-                font-size: 16px;
-                color: #ffffff;
-                line-height: 1.2;
-                justify-content: center;
-                align-items: center;
-                padding: 0 20px;
-                min-width: 120px;
-                height: 50px;
-                border-radius: 25px;
-                border-style: solid;
-                background-image: linear-gradient(#e73a4e,#f8e858);
-            }
-    </style>
-    <body>
-        <center><img src="logo.png" alt="Logo"></center>
+    <body link="red" alink="red" vlink="red">
+        <center><img src="Images/logo.png" alt="Logo"></center>
         <div class="container">
             <form action="/login" method="POST">
                 <div style="align-items : center; color: #262626; font-size: 30px;  font-family: Poppins ;display: block;font-weight: 500;">
@@ -82,13 +15,13 @@
                     </label>
                 </div>
                 <br><br><br><br>
-                <label for="u" style="font-family: Poppins; font-size: 20px;">Enter the email ID you used <br> while creating your profile.</label>
+                <label for="u" style="font-family: Poppins; font-size: 20px;">Enter the email ID you used <br> when creating your profile.</label>
                 <br><br><br>
                 <input id="u" type="email" name="email" placeholder="Registered email ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your email ID'"  >
-                <br>
-                <br>
-                <br>
+                <br><br><br>
                 <center><button>LOG IN</button></center>
+                <br><br><br>
+                <span style="font-family: Poppins;font-size: 13.5px;padding-right: 35px;padding-left: 35px;opacity: 0.8;">Don't have a profile yet? <a href="create-profile-back.js">Click here</a> to create one.</span>
             </form>
         </div>
     </body>

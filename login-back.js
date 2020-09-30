@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //html render
 app.get('/', function(request, response){
-    response.sendFile('E:\\Hiten\\Projects\\HTML Projects\\Cinder\\login.html');
+    response.sendFile('/login.html');
   });
   
   app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0' );
@@ -30,9 +30,9 @@ app.get('/', function(request, response){
           console.log(result);
           console.log(result.length)
           if (result.length == 0) {
-              res.sendFile('E:\\Hiten\\Projects\\HTML Projects\\Cinder\\wronglogin.html')
+              res.sendFile('/wronglogin.html')
           } else {
-            res.sendFile('E:\\Hiten\\Projects\\HTML Projects\\Cinder\\create-profile.html');
+            res.sendFile('/create-profile-back.html');
           };
           db.close();
         });
