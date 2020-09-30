@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //html render
 app.get('/', function(request, response){
-    response.sendFile('/homepage.html');
+    response.sendFile('/index.html');
   });
   
   app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0' );
