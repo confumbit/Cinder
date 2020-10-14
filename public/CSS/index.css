@@ -39,20 +39,25 @@ a{
 }
 ul{
     list-style: none;
-    padding: 0px;
-    margin: 12px 10px 10px 10px;
-    display: inline;
+    margin: 0px 10px 10px 10px;
     float: right;
     position: fixed;
     right: 30px;
 }
 li {margin-left: 30px;
     padding: 0;
-    display: inline;}
+    display: inline;
+}
 .nav{
     background-color: black;
     height: 70px;
-    padding-top: 5px;
+    padding-top: 3px;
+}
+.icon{
+    float: left;
+}
+nav{
+    display: inline;
 }
 p{
     font-family: Poppins;

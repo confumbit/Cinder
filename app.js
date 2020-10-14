@@ -33,7 +33,7 @@ app.get('/login', function (req, res) {
 
 //html form input and storing in mongodb
 app.post('/reg', (req, res) => {
-    res.send(`Full name is:${req.body.name}, ${req.body.email}, ${req.body.class} 
+    res.send(`Your details:${req.body.image}, ${req.body.name}, ${req.body.email}, ${req.body.class} 
     ${req.body.section}, ${req.body.gender}, ${req.body.insta}, ${req.body.whatsapp}, 
     ${req.body.snapchat}, ${req.body.othermedia}, ${req.body.interests}, ${req.body.bio}.`);
     MongoClient.connect(url, function(err, db) {
