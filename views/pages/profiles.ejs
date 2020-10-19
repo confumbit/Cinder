@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Cinder: Profiles</title>
+        <link rel="stylesheet" href="CSS/profiles.css">
+        <link rel="icon" href="Images/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <center><a href="/index" style="text-decoration: none;"><img src="Images/logo.png" alt="logo"></a></center>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <ul id="myUL">
+            <%
+            if (obj.imglink.length == 0{
+                obj.imglink = "Images/dp.jpg"
+            });
+            if(data.length > 0){
+            data.forEach(function(obj){ 
+            %>
+            <li class="profilecard">
+                <center>
+                   <img style="border-radius: 50%;" src=<%= obj.imglink %> alt="DP" width="150px"><br><br>
+                    <!--name-->
+                    <span class="name"><%= obj.name.toUpperCase() %></span> <br><br>
+                    <!--class and section-->
+                    <span style="font-family: 'Passion One', cursive; font-size: 24px;"><%= obj.class %> &nbsp&nbsp&nbsp <%= obj.section %></span> <br><br>
+                    <!--gender-->
+                    <span style="font-weight: 1000;"><%= obj.gender %></span>
+                    <img  src="" id="gender" alt=""><br><br><br>
+                    <!--social media-->
+                    <a href=<%="https://www.instagram.com/".concat(obj.insta) %>><img class="sm" src="Images/Instagram.png" alt="Instagram"></a>&nbsp&nbsp&nbsp&nbsp
+                    <a href=<%="https://wa.me/91".concat(obj.whatsapp) %>><img class="sm" src="Images/WhatsApp.png" alt="WhatsApp"></a>&nbsp&nbsp&nbsp&nbsp
+                    <a href=""><img class="sm" src="Images/Snapchat.png" alt="Snapchat"></a><br><br>
+                    <strong style="font-size: 20px;">Other Social Media: </strong><%= obj.othermedia %>  <br><br>
+                    <strong style="font-size: 20px;">Interests: </strong><%= obj.interests %> <br><br>
+                    <strong style="font-size: 20px;">Bio: </strong><%= obj.bio %> 
+                </center>
+            </li>
+            <%
+            })
+            } 
+            %>
+        </ul>
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+body{
+    background-image:linear-gradient(#e73a4e,#f8e858) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+img.sm{
+    width: 30px;
+}
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+a{
+    text-decoration: none;
+}
+li{
+    width: 300px;
+    background-color: white;
+    background-attachment: fixed;
+    font-family: 'Hind', sans-serif;
+    color: #524e4e;
+    border-radius: 25px;
+    padding: 30px 30px 30px 30px;
+    margin: 50px 50px 50px 50px;
+
+}
+.name{
+    background-image: -webkit-gradient( linear, left top, right top,  color-stop(0, cyan), color-stop(1, lime));
+    background-image: gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(0, #f8e858));
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 24px;
+    font-weight: 1000;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

@@ -6,6 +6,8 @@ var url = "mongodb+srv://hiten:dalmia@cinder.otv59.gcp.mongodb.net/cinderuser?re
 var path = require('path');
 const bodyParser = require('body-parser');
 
+
+
 // Initialise Express
 var app = express();
 
@@ -19,8 +21,8 @@ app.set('view engine', 'ejs');
 // Port website will run on
 app.listen(process.env.PORT || 8080);
 
-// *** GET Routes - display pages ***
-// Root Route
+
+// Routing
 app.get('/', function (req, res) {
     res.render('pages/index');
 });
@@ -30,29 +32,59 @@ app.get('/create-profile', function (req, res) {
 app.get('/login', function (req, res) {
     res.render('pages/login');
 });
+app.get('/index', function (req, res) {
+  res.render('pages/index');
+});
+
 
 //html form input and storing in mongodb
 app.post('/reg', (req, res) => {
-    res.send(`Your details:${req.body.image}, ${req.body.name}, ${req.body.email}, ${req.body.class} 
-    ${req.body.section}, ${req.body.gender}, ${req.body.insta}, ${req.body.whatsapp}, 
-    ${req.body.snapchat}, ${req.body.othermedia}, ${req.body.interests}, ${req.body.bio}.`);
-    MongoClient.connect(url, function(err, db) {
+  var myobj = { imglink: req.body.imglink, name: req.body.name, email: req.body.email,
+  class: req.body.class, section: req.body.section, gender: req.body.gender, 
+  insta: req.body.insta, whatsapp: req.body.whatsapp, snapchat: req.body.snapchat, 
+  othermedia: req.body.othermedia, interests: req.body.interests, bio: req.body.bio, fy: "fy"};
+
+  MongoClient.connect(url, function(err, db){
+    if (err) throw err;
+    var dbo = db.db("cinderuser");
+    dbo.collection("porps").insertOne(myobj, function(err, res) {
       if (err) throw err;
-      var dbo = db.db("cinderuser");
-      var myobj = { name: req.body.name, email: req.body.email,
-         class: req.body.class, section: req.body.section, gender: req.body.gender, 
-         insta: req.body.insta, whatsapp: req.body.whatsapp, snapchat: req.body.snapchat, 
-         othermedia: req.body.othermedia, interests: req.body.interests, bio: req.body.bio};
-      dbo.collection("porps").insertOne(myobj, function(err, res) {
-        if (err) throw err;
-        console.log("1 document inserted");
-        var users = 0;
-        users++;
-        console.log(users);
-        db.close();
-      });
+      console.log("1 document inserted");
+      var users = 0;
+      users++;
+      console.log(users);
+      db.close();
     });
+  });
+
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("cinderuser");
+    var query = { fy: "fy" };
+    dbo.collection("porps").find(query).toArray(function(err, result) {
+      if (err) throw err;
+      console.log(result)
+      res.render('pages/profiles',{
+        data: result
+      });
+      db.close();
+    });
+  }); 
 });
+
+/*//image upload
+app.post('/fileupload', function (req, res) {
+    var form = new formidable.IncomingForm();
+    form.parse(req, function (err, fields, files) {
+      var oldpath = files.filetoupload.path;
+      var newpath = '/public/user_images' + files.filetoupload.name;
+      fs.rename(oldpath, newpath, function (err) {
+        if (err) throw err;
+        res.write('File uploaded and moved!');
+        res.end();
+      });
+ });
+});*/
 
 //login verification
 app.post('/log', function(req,res){
@@ -63,11 +95,25 @@ app.post('/log', function(req,res){
         dbo.collection("porps").find(query).toArray(function(err, result) {
           if (err) throw err;
           console.log(result);
+          var obj = result[0]
+          console.log(result[0])
           console.log(result.length)
           if (result.length == 0) {
               res.render('pages/wrong-login')
           } else {
-            res.render('pages/create-profile');
+            MongoClient.connect(url, function(err, db) {
+              if (err) throw err;
+              var dbo = db.db("cinderuser");
+              var query = { fy: "fy" };
+              dbo.collection("porps").find(query).toArray(function(err, result) {
+                if (err) throw err;
+                console.log(result)
+                res.render('pages/profiles',{
+                  data: result
+                });
+                db.close();
+              });
+            });
           };
           db.close();
         });

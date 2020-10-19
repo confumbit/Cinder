@@ -14,11 +14,12 @@
   <link rel="stylesheet" href="CSS/create-profile.css">
   <link rel="icon" href="Images/favicon.png">
   <script src="create-profile-back.js"></script>
-
+  <link href="CSS/style.css" rel="stylesheet" media="screen">
+  <link href="CSS/mobile-style.css" rel="stylesheet" media="screen">
 </head>
 
-  <body alink="red" vlink="red">
-    <center><img src="Images/logo.png" style="font-family: Poppins; font-size: 12px;" alt="Logo"></center>
+<body alink="red" vlink="red">
+  <center><a href="/index" style="text-decoration: none;"><img src="Images/logo.png" style="font-family: Poppins; font-size: 12px;" alt="Logo"></a></center>
   <form action="/reg" method="POST">
   	<div class="container1">
   	<div>
@@ -29,13 +30,26 @@
   		CREATE A PROFILE
   		</label>
   	</div>
-  	<br><br><br><br>
-    <image id="output" src="Images/dp.jpg" style="font-family: Poppins; font-size: 12px;" alt="Fun fact: I did not know what DP stood for until the moment I wrote this code.">
+    <br><br><br><br>
+    <div class="title">
+      <p style="align-items : center; color: #262626; font-size: 20px;  font-family: Poppins ;display: block;">Profile Picture</p>
+      <p style="align-items : center; color: #262626; font-size: 16 px;  font-family: Poppins ;display: block;">After the image is uploaded copy the link and paste it in the field below.</p>
+  </div>
+  <div class="dropzone">
+      <div class="info"></div>
+  </div>
+  <script type="text/javascript" src="./js/imgur.js"></script>
+  <script type="text/javascript" src="./js/upload.js"></script>
+   <!--<image id="output" src="Images/dp.jpg" style="font-family: Poppins; font-size: 12px;" alt="Fun fact: I did not know what DP stood for until the moment I wrote this code.">
       <br><br>
-    <input type="file" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+    <input type="file" name="file" id="file"  onchange="loadFile(event)" style="display: none;">
     <label id="uu" for="file" style="cursor: pointer;">Upload Image</label>
-    <center id="hh">or use the default image.</center>
+    <center id="hh">or use the default image.</center>-->
       <br><br><br>
+      <div>
+        <input id="u" type="text" name="imglink" placeholder="Paste Image link here*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Paste the Image link here'"  required>
+      </div>
+      <br><br>
   	<div>
   		<input id="u" type="text" name="name" placeholder="Name*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"  required>
   	</div>
@@ -44,7 +58,7 @@
       <input id="ee" type="email" name="email" placeholder="Email ID*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your email ID(you will need this to login to Cinder)'" required>
     </div>
     <br><br><br><br>
-    <label style="font-family: Poppins;" for="sel">Grade</label>
+    <label style="font-family: Poppins;" for="sel">Class</label>
     <select  name="class" id="sel">
       <option value="8">8</option>
       <option value="9">9</option>
@@ -52,7 +66,7 @@
       <option value="11">11</option>
       <option value="12">12</option>
     </select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <label style="font-family: Poppins;" for="sel">Division</label>
+    <label style="font-family: Poppins;" for="sel">Section</label>
     <select name="section" id="sel">
       <option value="A">A</option>
       <option value="B">B</option>

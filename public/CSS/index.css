@@ -31,8 +31,14 @@ button:hover{
     height: 40px;
     border-radius: 25px;
     border-style: solid;
-    background-image: linear-gradient(#e73a4e,#f8e858);
-    opacity: 1;
+    background-color: black;
+    opacity: 0.8;
+    font-weight: 900;
+    background-image: -webkit-gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(1, #f8e858));
+    background-image: gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(0, #f8e858));
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 a{
     text-decoration: none;
