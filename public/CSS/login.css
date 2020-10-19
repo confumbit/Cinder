@@ -66,7 +66,7 @@ button:hover{
     border-style: solid;
     background-color: black;
 }
-.txt:hover{
+.txt:hover, .txt:active{
     background-image: -webkit-gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(1, #f8e858));
     background-image: gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(0, #f8e858));
     color:transparent;
