@@ -2,19 +2,20 @@ body{
     background-image:linear-gradient(#e73a4e,#f8e858) ;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0;
 }
 img.sm{
     width: 30px;
 }
 #myInput {
-    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; /* Full-width */
+    width: 95%; /* Full-width */
     font-size: 16px; /* Increase font-size */
     padding: 12px 20px 12px 40px; /* Add some padding */
     border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
+    margin: 20px 20px 20px 20px;
+    border-radius: 50px;
 }
 a{
     text-decoration: none;

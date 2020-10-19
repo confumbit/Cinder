@@ -8,14 +8,14 @@
     </head>
     <body>
         <center><a href="/index" style="text-decoration: none;"><img src="Images/logo.png" alt="logo"></a></center>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."></center>
         <ul id="myUL">
             <%
-            if (obj.imglink.length == 0{
-                obj.imglink = "Images/dp.jpg"
-            });
             if(data.length > 0){
-            data.forEach(function(obj){ 
+            data.forEach(function(obj){
+                if (obj.imglink.length == 0){
+                    obj.imglink = "Images/dp.jpg";
+                }; 
             %>
             <li class="profilecard">
                 <center>
@@ -31,14 +31,14 @@
                     <a href=<%="https://www.instagram.com/".concat(obj.insta) %>><img class="sm" src="Images/Instagram.png" alt="Instagram"></a>&nbsp&nbsp&nbsp&nbsp
                     <a href=<%="https://wa.me/91".concat(obj.whatsapp) %>><img class="sm" src="Images/WhatsApp.png" alt="WhatsApp"></a>&nbsp&nbsp&nbsp&nbsp
                     <a href=""><img class="sm" src="Images/Snapchat.png" alt="Snapchat"></a><br><br>
-                    <strong style="font-size: 20px;">Other Social Media: </strong><%= obj.othermedia %>  <br><br>
-                    <strong style="font-size: 20px;">Interests: </strong><%= obj.interests %> <br><br>
-                    <strong style="font-size: 20px;">Bio: </strong><%= obj.bio %> 
+                    <%= obj.othermedia %>  <br><br>
+                    <p><strong style="font-size: 20px;">Interests: </strong><%= obj.interests %> <br><br>
+                    <strong style="font-size: 20px;">Bio: </strong><%= obj.bio %> </p>
                 </center>
             </li>
             <%
-            })
-            } 
+            });
+            };
             %>
         </ul>
         <script>
@@ -55,9 +55,9 @@
                         li[i].style.display = "";
                     } else {
                         li[i].style.display = "none";
-                    }
-                }
-            }
-            </script>
+                    };
+                };
+            };
+        </script>
     </body>
 </html>

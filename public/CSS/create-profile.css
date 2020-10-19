@@ -11,7 +11,7 @@ body {
   border-radius: 10px;
   background: white;
   width: 550px;
-  height: 1910px;
+  height: 2210px;
   text-align: center;
   margin: auto;
   margin-top: 20px;
@@ -296,16 +296,17 @@ border-style: solid;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  min-width: 100px;
-  height: 40px;
+  min-width: 120px;
+  height: 50px;
   border-radius: 25px;
-  border-style: solid;
-  background-color: black;
-  opacity: 0.8;
-  font-weight: 900;
+border-style: solid;
+  background: #262626;
+}
+#txt:hover{
   background-image: -webkit-gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(1, #f8e858));
   background-image: gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(0, #f8e858));
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
-}        
+  font-weight: 900;
+}      

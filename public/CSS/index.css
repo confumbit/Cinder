@@ -34,6 +34,9 @@ button:hover{
     background-color: black;
     opacity: 0.8;
     font-weight: 900;
+
+}
+.txt:hover{
     background-image: -webkit-gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(1, #f8e858));
     background-image: gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(0, #f8e858));
     color:transparent;
@@ -79,4 +82,45 @@ h3{
     font-size: 45px;
     padding: 20px 20px 20px 20px;
 
+}
+.credits{
+    background-color: black;
+    height: 250px;
+    padding: 20px 20px 20px 20px;
+}
+#hd{
+    color: black;
+    font-size: 3px;
+}
+#hd:hover, #hd:active{
+    font-size: 40px;
+    color: white;
+    font-family: 'Pinyon Script', cursive;
+}
+#htg{
+    color: black;
+    font-size: 3px;
+}
+#htg:hover, #htg:active{
+    font-size: 40px;
+    color: white;
+    font-family: 'Pinyon Script', cursive;
+}
+#sp{
+    color: black;
+    font-size: 3px;
+}
+#sp:hover, #sp:active{
+    font-size: 40px;
+    color: white;
+    font-family: 'Pinyon Script', cursive;
+}
+#km{
+    color: black;
+    font-size: 3px;
+}
+#km:hover, #km:active{
+    font-size: 40px;
+    color: white;
+    font-family: 'Pinyon Script', cursive;
 }
