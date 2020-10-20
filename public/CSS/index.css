@@ -136,3 +136,19 @@ h3{
     font-size: 125px;
     font-weight: 900;
 }
+
+/* mobile css */
+@media only screen and (max-width: 700px) {
+    .nav{
+        background-color: black;
+        height: 70px;
+        width: 181vw;
+        padding-top: 3px;
+    }
+    .credits{
+        background-color: black;
+        height: 280px;
+        padding: 20px 20px 20px 20px;
+        width: 167vw;
+    }
+  }

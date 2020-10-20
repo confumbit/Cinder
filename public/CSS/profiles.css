@@ -28,8 +28,8 @@ li{
     color: #524e4e;
     border-radius: 25px;
     padding: 30px 30px 30px 30px;
-    margin: 50px 50px 50px 50px;
-
+    margin: 50px 30px 50px 30px;
+    display: inline-block;
 }
 .name{
     background-image: -webkit-gradient( linear, left top, right top,  color-stop(0, cyan), color-stop(1, lime));
@@ -42,8 +42,9 @@ li{
 }
 ul{
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 10px 10px 10px 10px;
+    margin: 0px 0px 0px 25px;
+
 }
 #gender{
     width: 50px;
