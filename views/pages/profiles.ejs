@@ -8,7 +8,7 @@
     </head>
     <body>
         <center><a href="/index" style="text-decoration: none;"><img src="Images/logo.png" alt="logo"></a></center>
-        <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."></center>
+        <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names, class, section or gender."></center>
         <ul id="myUL">
             <%
             if(data.length > 0){
@@ -19,18 +19,18 @@
             %>
             <li class="profilecard">
                 <center>
-                   <img style="border-radius: 50%;" src=<%= obj.imglink %> alt="DP" width="150px"><br><br>
+                   <img style="border-radius: 50%;" src=<%= obj.imglink %> alt="DP" width="150px" height="150px"><br><br>
                     <!--name-->
-                    <span class="name"><%= obj.name.toUpperCase() %></span> <br><br>
+                    <a><span class="name"><%= obj.name.toUpperCase() %></span> <br><br>
                     <!--class and section-->
                     <span style="font-family: 'Passion One', cursive; font-size: 24px;"><%= obj.class %> &nbsp&nbsp&nbsp <%= obj.section %></span> <br><br>
                     <!--gender-->
-                    <span style="font-weight: 1000;"><%= obj.gender %></span>
-                    <img  src="" id="gender" alt=""><br><br><br>
+                    <span style="font-weight: 1000;"></span>
+                    <img  src=<%= obj.gender %> id="gender" alt=<%= obj.gender %>><br><br></a>
                     <!--social media-->
                     <a href=<%="https://www.instagram.com/".concat(obj.insta) %>><img class="sm" src="Images/Instagram.png" alt="Instagram"></a>&nbsp&nbsp&nbsp&nbsp
                     <a href=<%="https://wa.me/91".concat(obj.whatsapp) %>><img class="sm" src="Images/WhatsApp.png" alt="WhatsApp"></a>&nbsp&nbsp&nbsp&nbsp
-                    <a href=""><img class="sm" src="Images/Snapchat.png" alt="Snapchat"></a><br><br>
+                    <a href=""><img class="sm" src="Images/Snapchat.png" alt="Snapchat"></a>
                     <%= obj.othermedia %>  <br><br>
                     <p><strong style="font-size: 20px;">Interests: </strong><%= obj.interests %> <br><br>
                     <strong style="font-size: 20px;">Bio: </strong><%= obj.bio %> </p>
