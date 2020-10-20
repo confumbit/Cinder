@@ -85,7 +85,7 @@ h3{
 }
 .credits{
     background-color: black;
-    height: 250px;
+    height: 280px;
     padding: 20px 20px 20px 20px;
 }
 #hd{
@@ -123,4 +123,16 @@ h3{
     font-size: 40px;
     color: white;
     font-family: 'Pinyon Script', cursive;
+}
+.usercount{
+    text-align: justify;
+    color: black;
+    font-family: Poppins;
+}
+.updown{
+    font-size: 40px;
+}
+.users{
+    font-size: 125px;
+    font-weight: 900;
 }

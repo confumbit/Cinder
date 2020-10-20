@@ -14,7 +14,7 @@ body.loading .loading-modal {
 
 .dropzone {
     border: 4px dashed #ccc;
-    height: 100px;
+    height: 200px;
     position: relative;
     margin-right: auto;
     margin-left: auto;
@@ -52,7 +52,7 @@ body.loading .loading-modal {
 }
 
 .image-url {
-    width: 50%;
+    width: 80%;
 }
 
 .dropzone.dropzone-dragging {
@@ -78,7 +78,7 @@ body.loading .loading-modal {
 }
 
 .img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }

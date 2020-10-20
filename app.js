@@ -23,17 +23,47 @@ app.listen(process.env.PORT || 8080);
 
 
 // Routing
+
+// Index on start
 app.get('/', function (req, res) {
-    res.render('pages/index');
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("cinderuser");
+    var query = { fy: "fy" };
+    dbo.collection("porps").find(query).toArray(function(err, result) {
+      if (err) throw err;
+      res.render('pages/index',{
+        users: result.length
+      });
+      db.close();
+    });
+  });
 });
+
+// create-profile
 app.get('/create-profile', function (req, res) {
     res.render('pages/create-profile');
 });
+
+//Login
 app.get('/login', function (req, res) {
     res.render('pages/login');
 });
+
+// Index on hyperlink
 app.get('/index', function (req, res) {
-  res.render('pages/index');
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("cinderuser");
+    var query = { fy: "fy" };
+    dbo.collection("porps").find(query).toArray(function(err, result) {
+      if (err) throw err;
+      res.render('pages/index',{
+        users: result.length
+      });
+      db.close();
+    });
+  });
 });
 
 
@@ -72,19 +102,6 @@ app.post('/reg', (req, res) => {
   }); 
 });
 
-/*//image upload
-app.post('/fileupload', function (req, res) {
-    var form = new formidable.IncomingForm();
-    form.parse(req, function (err, fields, files) {
-      var oldpath = files.filetoupload.path;
-      var newpath = '/public/user_images' + files.filetoupload.name;
-      fs.rename(oldpath, newpath, function (err) {
-        if (err) throw err;
-        res.write('File uploaded and moved!');
-        res.end();
-      });
- });
-});*/
 
 //login verification
 app.post('/log', function(req,res){
