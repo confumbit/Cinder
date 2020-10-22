@@ -49,3 +49,9 @@ ul{
 #gender{
     width: 50px;
 }
+.nav{
+    background-color: black;
+    height: 70px;
+    padding-top: 3px;
+    margin-bottom: 200px;
+}

@@ -4,6 +4,7 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     margin-bottom: 100px;
+    margin: 0px 0px 100px 0px;
 }
 .container{
     border: 2px solid white;
@@ -73,4 +74,10 @@ button:hover{
     -webkit-background-clip: text;
     background-clip: text;
     font-weight: 900;
+}
+.nav{
+    background-color: black;
+    height: 70px;
+    padding-top: 3px;
+    margin-bottom: 200px;
 }
