@@ -32,7 +32,7 @@
             <option value="I">I</option>
 
         </select>
-        <button class="classButton" id="classButton">Class</button>
+        <button class="sectionButton" id="sectionButton">Class</button>
         
         <ul id="myUL">
             <%
@@ -48,7 +48,7 @@
                     <!--name-->
                     <a><span class="name"><%= obj.name.toUpperCase() %></span> <br><br>
                     <!--class and section-->
-                    <span style="font-family: 'Passion One', cursive; font-size: 24px;"><a><%= obj.class %></a> &nbsp&nbsp&nbsp <a><%= obj.section %></a></span> <br><br>
+                    <span style="font-family: 'Passion One', cursive; font-size: 24px;"><a><%= obj.class %></a> &nbsp&nbsp&nbsp <a class="section"><%= obj.section %></a></span> <br><br>
                     <!--gender-->
                     <span style="font-weight: 1000;"></span>
                     <img  src=<%= obj.gender %> id="gender" alt=<%= obj.gender %>><br><br></a>
@@ -94,7 +94,7 @@
                 ul = document.getElementById("myUL");
                 li = ul.getElementsByTagName("li");
                 for (i = 0; i < li.length; i++) {
-                    a = li[i].getElementsByTagName("a")[1];
+                    a = li[i].querySelector(".section");
                     txtValue = a.textContent || a.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
                         li[i].style.display = "";

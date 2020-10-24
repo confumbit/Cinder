@@ -33,7 +33,6 @@ button:hover{
     border-style: solid;
     background-color: black;
     opacity: 0.8;
-    font-weight: 900;
 
 }
 .txt:hover, .txt:active{
@@ -42,6 +41,7 @@ button:hover{
     color:transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    font-weight: 900;
 }
 a{
     text-decoration: none;
