@@ -12,6 +12,16 @@
             <a href="/index" style="text-decoration: none;"><img src="Images/favicon.png" alt="logo" height="70px" width="70px" style="float: left;"></a>
         </div>
         <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a name, class, section or gender."></center>
+        <select name="classDropdown" id="classDropdown">
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <button class="classButton" id="classButton">Class</button>
+
+        
         <ul id="myUL">
             <%
             if(data.length > 0){
@@ -53,6 +63,26 @@
                 li = ul.getElementsByTagName("li");
                 for (i = 0; i < li.length; i++) {
                     a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    };
+                };
+            };
+
+            const classButton = document.querySelector('.classButton')
+            classButton.addEventListener('click', myClass)
+
+            function myClass() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("classDropdown");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsById("gender");
                     txtValue = a.textContent || a.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
                         li[i].style.display = "";
