@@ -14,11 +14,11 @@ body.loading .loading-modal {
 
 .dropzone {
     border: 4px dashed #ccc;
-    height: 200px;
+    height:200px;
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    max-width: 50%;
+    max-width: 80%;
 }
 
 .info {
@@ -52,7 +52,7 @@ body.loading .loading-modal {
 }
 
 .image-url {
-    width: 80%;
+    width: 50%;
 }
 
 .dropzone.dropzone-dragging {
@@ -78,7 +78,5 @@ body.loading .loading-modal {
 }
 
 .img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 100%;
 }
