@@ -20,7 +20,19 @@
             <option value="12">12</option>
         </select>
         <button class="classButton" id="classButton">Class</button>
+        <select name="sectionDropdown" id="sectionDropdown">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
 
+        </select>
+        <button class="classButton" id="classButton">Class</button>
         
         <ul id="myUL">
             <%
@@ -36,7 +48,7 @@
                     <!--name-->
                     <a><span class="name"><%= obj.name.toUpperCase() %></span> <br><br>
                     <!--class and section-->
-                    <span style="font-family: 'Passion One', cursive; font-size: 24px;"><%= obj.class %> &nbsp&nbsp&nbsp <%= obj.section %></span> <br><br>
+                    <span style="font-family: 'Passion One', cursive; font-size: 24px;"><a><%= obj.class %></a> &nbsp&nbsp&nbsp <a><%= obj.section %></a></span> <br><br>
                     <!--gender-->
                     <span style="font-weight: 1000;"></span>
                     <img  src=<%= obj.gender %> id="gender" alt=<%= obj.gender %>><br><br></a>
@@ -82,7 +94,27 @@
                 ul = document.getElementById("myUL");
                 li = ul.getElementsByTagName("li");
                 for (i = 0; i < li.length; i++) {
-                    a = li[i].getElementsByTagName("a")[0];
+                    a = li[i].getElementsByTagName("a")[1];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    };
+                };
+            };
+
+            const sectionButton = document.querySelector('.sectionButton')
+            sectionButton.addEventListener('click', mySection)
+
+            function mySection() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("sectionDropdown");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[2];
                     txtValue = a.textContent || a.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
                         li[i].style.display = "";
