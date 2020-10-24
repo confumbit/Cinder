@@ -11,7 +11,7 @@ body {
   border-radius: 10px;
   background: white;
   width: 550px;
-  height: 2280px;
+  height: fit-content;
   text-align: center;
   margin: auto;
   margin-top: 20px;

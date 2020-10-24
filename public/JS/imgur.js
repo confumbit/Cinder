@@ -93,7 +93,7 @@
 
             div = this.createEls('div', {className: 'loading-modal'});
             table = this.createEls('table', {className: 'loading-table'});
-            img = this.createEls('img', {className: 'loading-image', src: './css/loading-spin.svg'});
+            img = this.createEls('img', {className: 'loading-image', src: './CSS/loading-spin.svg'});
 
             div.appendChild(table);
             table.appendChild(img);

@@ -43,7 +43,7 @@
                     <!--social media-->
                     <a href=<%="https://www.instagram.com/".concat(obj.insta) %>><img class="sm" src="Images/Instagram.png" alt="Instagram"></a>&nbsp&nbsp&nbsp&nbsp
                     <a href=<%="https://wa.me/91".concat(obj.whatsapp) %>><img class="sm" src="Images/WhatsApp.png" alt="WhatsApp"></a>&nbsp&nbsp&nbsp&nbsp
-                    <a href=""><img class="sm" src="Images/Snapchat.png" alt="Snapchat"></a>
+                    <a href=""><img class="sm" src="Images/Snapchat.png" alt="Snapchat"></a> <br><br>
                     <%= obj.othermedia %>  <br><br>
                     <p><strong style="font-size: 20px;">Interests: </strong><%= obj.interests %> <br><br>
                     <strong style="font-size: 20px;">Bio: </strong><%= obj.bio %> </p>
@@ -82,7 +82,7 @@
                 ul = document.getElementById("myUL");
                 li = ul.getElementsByTagName("li");
                 for (i = 0; i < li.length; i++) {
-                    a = li[i].getElementsById("gender");
+                    a = li[i].getElementsByTagName("a")[0];
                     txtValue = a.textContent || a.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
                         li[i].style.display = "";
