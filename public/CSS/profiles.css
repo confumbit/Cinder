@@ -12,10 +12,17 @@ img.sm{
     background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 95%; /* Full-width */
     font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
+    padding: 10px 18px 10px 38px; /* Add some padding */
+    border-bottom: 3px; /* Add a grey border */
     margin: 20px 20px 20px 20px;
-    border-radius: 50px;
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom-color: #D3D3D3;
+    font-family: Poppins;
+    border-width: 3px;
+    background-image: url('/Images/search.png');
 }
 a{
     text-decoration: none;
@@ -53,5 +60,46 @@ ul{
     background-color: black;
     height: 70px;
     padding-top: 3px;
-    margin-bottom: 200px;
+}
+#genderDropdown, #sectionDropdown, #classDropdown{
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom-color: #D3D3D3;
+    border-width: 3px;
+    font-size: 16px;
+    font-family: Poppins;
+    color: #262626;
+    line-height: 1.2;
+    padding: 0 5px 0 30px;
+    margin-left: 45px;
+    background-position: 0 12px;
+    background-size: 20px	;
+    background-repeat: no-repeat;
+    outline: none;
+}
+#genderDropdown:focus, #sectionDropdown:focus, #classDropdown:focus, #myInput:focus{
+    border-bottom-color: #262626;
+    transition: 0.75s;
+}
+button{
+    font-family: Poppins;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.2;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    background: black;
+    border-radius: 5px;
+    padding: 4px 4px 4px 4px;
+}
+.txt:hover, .txt:active{
+    background-image: -webkit-gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(1, #f8e858));
+    background-image: gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(0, #f8e858));
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 900;
 }
