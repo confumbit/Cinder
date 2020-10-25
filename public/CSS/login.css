@@ -81,3 +81,7 @@ button:hover{
     padding-top: 3px;
     margin-bottom: 200px;
 }
+#u:focus{
+    border-bottom-color: #262626;
+    transition: 0.75s;
+}

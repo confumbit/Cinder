@@ -7,25 +7,32 @@
     <style>
         h1{
             font-family: Poppins;
+            display: flex;
+            justify-content: center;
+            margin-top: 15%;
         }
         body{
             background-image:linear-gradient(#e73a4e,#f8e858) ;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            margin: 0;
         }
         .nav{
             background-color: black;
             height: 70px;
             padding-top: 3px;
         }
+        center{
+            font-family: Poppins;
+        }
     </style>
-    <body text="black" topmargin="250px">
+    <body text="black">
         <div class="nav">
-            <a href="/index" style="text-decoration: none;"><img src="Images/favicon.png" alt="logo" style="float: left;"></a>
+            <a href="/index" style="text-decoration: none;"><img src="Images/favicon.png" alt="logo" height="70px" width="70px" style="float: left;"></a>
         </div>
         <center><h1>YOU DO NOT HAVE A PROFILE REGISTERED WITH THAT EMAIL. <br>
-        CREATE A NEW PROFILE OR RECHECK YOUR EMAIL ADRESS.</h1></center> <br> <br>
-        Click <a href="/create-profile">here</a> to create a profile.
+        CREATE A NEW PROFILE OR RECHECK YOUR EMAIL ADRESS.</h1> <br> <br>
+        Click <a href="/create-profile" style="color: red;">here</a> to create a profile.</center>
 
     </body>
 </html>
