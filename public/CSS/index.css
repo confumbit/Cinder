@@ -90,38 +90,38 @@ h3{
 #hd{
     color: black;
     font-size: 3px;
+    font-family: 'Great Vibes', cursive;
 }
 #hd:hover, #hd:active{
     font-size: 40px;
     color: white;
-    font-family: 'Pinyon Script', cursive;
 }
 #htg{
     color: black;
     font-size: 3px;
+    font-family: 'Great Vibes', cursive;
 }
 #htg:hover, #htg:active{
     font-size: 40px;
     color: white;
-    font-family: 'Pinyon Script', cursive;
 }
 #sp{
     color: black;
     font-size: 3px;
+    font-family: 'Great Vibes', cursive;
 }
 #sp:hover, #sp:active{
     font-size: 40px;
     color: white;
-    font-family: 'Pinyon Script', cursive;
 }
 #km{
     color: black;
     font-size: 3px;
+    font-family: 'Great Vibes', cursive;
 }
 #km:hover, #km:active{
     font-size: 40px;
     color: white;
-    font-family: 'Pinyon Script', cursive;
 }
 .usercount{
     text-align: justify;
@@ -141,3 +141,26 @@ h3{
 }
 
 h3 { font-family: 'Grenze Gotisch', cursive;}
+
+.boo {
+  font-family: 'Cinzel', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
