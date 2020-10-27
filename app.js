@@ -86,21 +86,10 @@ app.post('/reg', (req, res) => {
       db.close();
     });
   });
-
-  MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbo = db.db("cinderuser");
-    var query = { fy: "fy" };
-    dbo.collection("porps").find(query).toArray(function(err, result) {
-      if (err) throw err;
-      console.log(result)
-      res.render('pages/profiles',{
-        data: result
-      });
-      db.close();
-    });
-  }); 
+  
+  res.render('pages/after-reg')
 });
+
 
 
 //login verification
