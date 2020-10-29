@@ -140,8 +140,34 @@ h3{
   font-family: 'Grenze Gotisch', cursive;
 }
 
-h3 { font-family: 'Grenze Gotisch', cursive;}
+h3 {
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 48px;
+}
 
 .boo {
   font-family: 'Cinzel', serif;
+}
+#tt1, #tt2{
+    font-size: 12px;
+}
+#anime:hover #t1,#anime:hover #t2, #anime:active #t1,#anime:active #t2{
+    animation-name: jimjam;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;  
+    animation-timing-function: ease-in;
+}
+@keyframes jimjam{
+    from{font-size: 48px;}
+    to{font-size: 16px;}
+}
+#anime:hover #tt1,#anime:hover #tt2, #anime:active #tt1,#anime:active #tt2{
+    animation-name: jamjim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;  
+    animation-timing-function: ease-in;
+}
+@keyframes jamjim{
+    from{font-size: 12px;}
+    to{font-size: 24px;}
 }
