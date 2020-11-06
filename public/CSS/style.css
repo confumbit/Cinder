@@ -78,5 +78,7 @@ body.loading .loading-modal {
 }
 
 .img {
-    width: 100%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }

@@ -69,7 +69,7 @@ app.get('/index', function (req, res) {
 
 //html form input and storing in mongodb
 app.post('/reg', (req, res) => {
-  var myobj = { imglink: req.body.imglink, name: req.body.name, email: req.body.email,
+  var myobj = { imglink: req.body.imglink, name: req.body.name, email: req.body.email, password: req.body.password,
   class: req.body.class, section: req.body.section, gender: req.body.gender, 
   insta: req.body.insta, whatsapp: req.body.whatsapp, snapchat: req.body.snapchat, 
   othermedia: req.body.othermedia, interests: req.body.interests, bio: req.body.bio, fy: "fy"};
@@ -94,34 +94,31 @@ app.post('/reg', (req, res) => {
 
 //login verification
 app.post('/log', function(req,res){
-    MongoClient.connect(url, function(err, db) {
-        if (err) throw err;
-        var dbo = db.db("cinderuser");
-        var query = { email: req.body.email };
-        dbo.collection("porps").find(query).toArray(function(err, result) {
-          if (err) throw err;
-          console.log(result);
-          var obj = result[0]
-          console.log(result[0])
-          console.log(result.length)
-          if (result.length == 0) {
-              res.render('pages/wrong-login')
-          } else {
-            MongoClient.connect(url, function(err, db) {
-              if (err) throw err;
-              var dbo = db.db("cinderuser");
-              var query = { fy: "fy" };
-              dbo.collection("porps").find(query).toArray(function(err, result) {
-                if (err) throw err;
-                console.log(result)
-                res.render('pages/profiles',{
-                  data: result
-                });
-                db.close();
-              });
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("cinderuser");
+    var query = { email: req.body.email };
+    dbo.collection("porps").find(query).toArray(function(err, result) {
+      if (err) throw err;
+      var obj = result[0]
+      if (result.length === 0) {
+        res.render('pages/wrong-login')
+      } else if (result.length !== 0) {
+        console.log(obj.password);
+        if (obj.password !== req.body.password) {
+        res.render('pages/wrong-login')
+        } else {
+          var query = { fy: "fy" };
+          dbo.collection("porps").find(query).toArray(function(err, result) {
+            if (err) throw err;
+            res.render('pages/profiles',{
+              data: result
             });
-          };
-          db.close();
-        });
+            db.close();
+          });
+        };
+      }
+      db.close();
     });
+  });
 });
