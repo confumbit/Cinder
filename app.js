@@ -29,8 +29,7 @@ app.get('/', function (req, res) {
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("cinderuser");
-    var query = { fy: "fy" };
-    dbo.collection("porps").find(query).toArray(function(err, result) {
+    dbo.collection("porps").find().toArray(function(err, result) {
       if (err) throw err;
       res.render('pages/index',{
         users: result.length
