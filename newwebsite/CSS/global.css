@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
+
+*{
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+    color: #000;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: tomato;
+}
+
+a:hover {
+    text-decoration: underline;
+}
