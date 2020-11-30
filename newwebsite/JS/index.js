@@ -24,7 +24,7 @@ const logo = document.querySelector('nav img');
 function openNav(e) {
     navbg.style.backgroundColor = 'black';
     links.forEach(function (link) {
-        link.classList.toggle('fadeIn');
+        link.classList.toggle('fade');
     })
     navbg.classList.toggle('open');
     e.target.removeEventListener('click', openNav);
@@ -33,12 +33,16 @@ function openNav(e) {
 
 function closeNav(e) {
     navbg.style.backgroundColor = 'transparent';
-    links.forEach(function (link) {
-        link.classList.toggle('fadeOut');
+    links.forEach( link => {
+        link.classList.toggle('fade');
     })
-    navbg.classList.toggle('close');
+    navbg.classList.toggle('open');
     e.target.removeEventListener('click', closeNav);
     e.target.addEventListener('click', openNav);
 }
 
 logo.addEventListener('click', openNav);
+
+links[3].addEventListener('click', function () {
+    document.querySelector('#email').focus();
+})

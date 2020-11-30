@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="CSS/global.css">
     <link rel="stylesheet" href="CSS/index.css">
+    <link rel="icon" href="Images/favicon.png">
     <script src="JS/index.js" defer></script>
 
     <title>Cinder | Home</title>
@@ -13,13 +14,14 @@
 <body>
     <header>
         <center>
+            <a href="#" id="up">↑</a>
             <nav>
                 <ul>
                     <li><img src="Images/favicon.png" alt="icon"></li>
-                    <li><a href="#" id="tabs">What is Cinder?</a></li>
-                    <li><a href="#" id="tabs">About us</a></li>
+                    <li><a href="#about" id="tabs">What is Cinder?</a></li>
+                    <li><a href="#about" id="tabs">About us</a></li>
                     <li><a href="#" id="tabs">Register</a></li>
-                    <li><a href="#" id="tabs">Log In</a></li>
+                    <li><a id="tabs">Log In</a></li>
                 </ul>
             </nav>
         </center>
@@ -42,7 +44,7 @@
                 <form action="/log">
                     <p style="font-size: 40px;">Welcome Back</p>
                     <div class="wrong">Username or password is wrong</div>
-                    <input type="email" placeholder="Email ID" name="email" onfocus="this.placeholder='Enter your email ID'">
+                    <input type="email" placeholder="Email ID" name="email" id="email" onfocus="this.placeholder='Enter your email ID'">
                     <input type="password" placeholder="Password" name="password" onfocus="this.placeholder='Enter your password'">
                     <Button>Log In</Button>
                     <p style="bottom: 10px;"><a href="/forgot-password">Forgot Password?</a></p>
@@ -52,6 +54,8 @@
     </header>
 
     <section>
+        <a id="about"></a>
+        <br><br><br>
         <div class="container" style="display: inline;">
             <img src="Images/logo.png" alt="logo">
             <div class="about">
@@ -72,7 +76,7 @@
                     About us
                 </div>
                 <div class="info">
-                    No one really cares move on
+                    No one really cares move on.
                 </div>
             </div>
         </div>
