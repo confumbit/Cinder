@@ -21,6 +21,7 @@ app.set('view engine', 'ejs');
 // Port website will run on
 app.listen(process.env.PORT || 8080);
 
+console.log("I'm up!");
 
 // Routing
 
