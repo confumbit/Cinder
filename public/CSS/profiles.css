@@ -1,107 +1,136 @@
-body{
-    background-image:linear-gradient(#e73a4e,#f8e858) ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
+body {
+  background-image: linear-gradient(#e73a4e, #f8e858);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
 }
-img.sm{
-    width: 50px;
+img.sm {
+  width: 80px;
 }
 #myInput {
-    background-position: 10px 12px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 95%; /* Full-width */
-    font-size: 16px; /* Increase font-size */
-    padding: 10px 18px 10px 38px; /* Add some padding */
-    border-bottom: 3px; /* Add a grey border */
-    margin: 20px 20px 20px 20px;
-    border-style: solid;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom-color: #D3D3D3;
-    font-family: Poppins;
-    border-width: 3px;
-    background-image: url('/Images/search.png');
-    -moz-outline-style: none;
-    outline: 0;
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 95%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 10px 18px 10px 38px; /* Add some padding */
+  border-bottom: 3px; /* Add a grey border */
+  margin: 20px 20px 20px 20px;
+  border-style: solid;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom-color: #d3d3d3;
+  font-family: Poppins;
+  border-width: 3px;
+  background-image: url("/Images/search.png");
+  -moz-outline-style: none;
+  outline: 0;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-li{
-    width: 300px;
-    background-color: white;
-    background-attachment: fixed;
-    font-family: 'Hind', sans-serif;
-    color: #524e4e;
-    border-radius: 25px;
-    padding: 30px 30px 30px 30px;
-    margin: 50px 30px 50px 30px;
-    display: inline-block;
+li {
+  width: 300px;
+  background-color: white;
+  background-attachment: fixed;
+  font-family: "Hind", sans-serif;
+  color: #524e4e;
+  border-radius: 25px;
+  padding: 30px 30px 30px 30px;
+  margin: 50px 30px 50px 30px;
+  display: inline-block;
 }
-.name{
-    background-image: -webkit-gradient( linear, left top, right top,  color-stop(0, cyan), color-stop(1, lime));
-    background-image: gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(0, #f8e858));
-    color:transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    font-size: 30px;
-    font-weight: 900;
+.name {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, cyan),
+    color-stop(1, lime)
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #e73a4e),
+    color-stop(0, #f8e858)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 30px;
+  font-weight: 900;
 }
-ul{
-    list-style: none;
-    padding: 10px 10px 10px 10px;
-    margin: 0px 0px 0px 25px;
-
+ul {
+  list-style: none;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 0px 0px 25px;
 }
-#gender{
-    width: 50px;
+#gender {
+  width: 50px;
 }
-.nav{
-    background-color: black;
-    height: 70px;
-    padding-top: 3px;
+.nav {
+  background-color: black;
+  height: 70px;
+  padding-top: 3px;
 }
-#genderDropdown, #sectionDropdown, #classDropdown{
-    border-style: solid;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom-color: #D3D3D3;
-    border-width: 3px;
-    font-size: 16px;
-    font-family: Poppins;
-    color: #262626;
-    line-height: 1.2;
-    padding: 0 5px 0 30px;
-    margin-left: 45px;
-    background-position: 0 12px;
-    background-size: 20px	;
-    background-repeat: no-repeat;
-    outline: none;
+#genderDropdown,
+#sectionDropdown,
+#classDropdown {
+  border-style: solid;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom-color: #d3d3d3;
+  border-width: 3px;
+  font-size: 16px;
+  font-family: Poppins;
+  color: #262626;
+  line-height: 1.2;
+  padding: 0 5px 0 30px;
+  margin-left: 45px;
+  background-position: 0 12px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  outline: none;
 }
-#genderDropdown:focus, #sectionDropdown:focus, #classDropdown:focus, #myInput:focus{
-    border-bottom-color: #262626;
-    transition: 0.75s;
+#genderDropdown:focus,
+#sectionDropdown:focus,
+#classDropdown:focus,
+#myInput:focus {
+  border-bottom-color: #262626;
+  transition: 0.75s;
 }
-button{
-    font-family: Poppins;
-    font-size: 16px;
-    color: #ffffff;
-    line-height: 1.2;
-    justify-content: center;
-    align-items: center;
-    border-style: solid;
-    background: black;
-    border-radius: 5px;
-    padding: 4px 4px 4px 4px;
+button {
+  font-family: Poppins;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.2;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  background: black;
+  border-radius: 5px;
+  padding: 4px 4px 4px 4px;
 }
-.txt:hover, .txt:active{
-    background-image: -webkit-gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(1, #f8e858));
-    background-image: gradient( linear, left top, right top,  color-stop(0, #e73a4e), color-stop(0, #f8e858));
-    color:transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    font-weight: 900;
+.txt:hover,
+.txt:active {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #e73a4e),
+    color-stop(1, #f8e858)
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #e73a4e),
+    color-stop(0, #f8e858)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
 }
