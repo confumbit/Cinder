@@ -23,7 +23,6 @@ img.sm {
   font-family: Poppins;
   border-width: 3px;
   background-image: url("/Images/search.png");
-  -moz-outline-style: none;
   outline: 0;
 }
 a {
